@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Bouncy Ball',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Montserrat',
       ),
       onGenerateRoute: MainNavigation.onGenerateRoute,
       initialRoute: RouteNames.home,

@@ -43,25 +43,8 @@ class HomeInput extends StatelessWidget {
         cursorColor: Colors.black,
         cursorRadius: const Radius.circular(50),
         decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderSide: error != null
-                ? BorderSide(
-                    width: 1,
-                    color: Colors.red,
-                  )
-                : BorderSide(
-                    width: 0,
-                    style: BorderStyle.none,
-                  ),
-            borderRadius: BorderRadius.circular(15),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              width: 0,
-              style: BorderStyle.none,
-            ),
-            borderRadius: BorderRadius.circular(15),
-          ),
+          enabledBorder: buildOutlineBorder(),
+          focusedBorder: buildOutlineBorder(),
           isDense: true,
           filled: true,
           fillColor: Colors.black.withOpacity(.1),
@@ -80,6 +63,21 @@ class HomeInput extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  OutlineInputBorder buildOutlineBorder() {
+    return OutlineInputBorder(
+      borderSide: error != null
+          ? BorderSide(
+              width: 1,
+              color: Colors.red,
+            )
+          : BorderSide(
+              width: 0,
+              style: BorderStyle.none,
+            ),
+      borderRadius: BorderRadius.circular(15),
     );
   }
 }

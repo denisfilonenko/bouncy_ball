@@ -34,7 +34,13 @@ class StartButton extends StatelessWidget {
                   strokeWidth: 3.0,
                 ),
               )
-            : Text('Start'),
+            : Text(
+                'Start',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
       ),
     );
   }
